@@ -12,7 +12,6 @@
   },
   "content_scripts": [
     {
-      "matches": ["http://localhost/*", "http://*.cloudfleetmanager.com/*"],
       "js": ["js/content.js", "js/chance.min.js", "js/random.title.js"]
     }
   ],
