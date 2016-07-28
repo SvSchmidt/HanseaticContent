@@ -17,6 +17,7 @@
       }
 
       element.value = result;
+      element.dispatchEvent(new Event('change'));
     }
   });
 }());
