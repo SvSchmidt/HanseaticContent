@@ -1,0 +1,31 @@
+{
+  "name": "HanseaticContent",
+  "description": "Simple chrome extension to fill input fields with random data (e.g. Name, Telephone, E-Mail etc.) using chance.js",
+  "author": "Sven Schmidt, Hanseaticsoft",
+  "homepage_url": "http://hanseaticsoft.com",
+  "manifest_version": 2,
+  "version" : "1.0.0",
+  "icons" : {
+    "16" : "icon-small.png",
+    "32" : "icon-large.png",
+    "128": "icon-xlarge.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://localhost/*", "http://*.cloudfleetmanager.com/*"],
+      "js": ["js/content.js", "js/chance.min.js", "js/random.title.js"]
+    }
+  ],
+  "background": {
+    "page": "background.html"
+  },
+  "browser_action": {
+      "default_icon" : "icon-small.png",
+      "default_title" : "Fill form fields with generated content"
+    },
+  "permissions" : [
+    "tabs",
+    "activeTab",
+    "contextMenus"
+    ]
+}
